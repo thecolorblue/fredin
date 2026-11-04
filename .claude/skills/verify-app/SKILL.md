@@ -19,6 +19,8 @@ npx serve out -l 4173
 
 Ready when `curl -sf localhost:4173/` returns HTML containing "Brad Davis". Any free port works; use `python3 -m http.server 4173 --directory out` if `serve` is unavailable.
 
+To check the GitHub Pages subpath, build with `NEXT_PUBLIC_BASE_PATH=/fredin npm run build`, copy `out/` to `$SCRATCH/site/fredin` (an absolute scratch folder, emptied first), and serve `$SCRATCH/site` instead. Then load `http://localhost:4173/fredin/` and expect zero failed requests.
+
 ## Doctor
 
 Read-only checks before launching:
